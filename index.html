@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no"> 
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="robots" content="all">
+    <meta name="author" content="Jim-C3" />
+    <meta name="Copyright" content="" />
+    <title>习近平邀请你视频通话</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/style.css"/>
+    <script> 
+        //屏幕适应 
+        (function (win, doc) {
+            if (!win.addEventListener) return;
+            var html = document.documentElement;
+            function setFont() {
+                var html = document.documentElement;
+                var k = 750;
+                html.style.fontSize = html.clientWidth / k * 100 + "px";
+            }
+            setFont();
+            setTimeout(function () {
+                setFont();
+            }, 300);
+            doc.addEventListener('DOMContentLoaded', setFont, false);
+            win.addEventListener('resize', setFont, false);
+            win.addEventListener('load', setFont, false);
+        })(window, document);
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?83925515474bbd4c5922abb3f9b7b67b";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>        
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="logo"></div>
+        <div class="cover"></div>
+        <div class="cover-safe">
+            <div class="avatar"></div>
+            <div class="bmp2"></div>
+            <div class="bmp1" id="btn">
+                <div class="iphone"></div>
+            </div>
+            <div class="ripple" >
+                <svg id="svgAni" width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50%" cy="50%" r="49%" stroke-width="1" stroke="#E7CD9C" fill="none" fill-opacity="0">
+                        <animate id="ani1" attributeName="r" begin="0" from="30%" to="49%" dur="1s" repeatCount="indefinite"></animate>
+                        <animate attributeName="opacity" begin="0" from="1" to="0" dur="1s" repeatCount="indefinite"></animate>
+                    </circle>
+                    <circle  cx="50%" cy="50%" r="43%" stroke-width="1" stroke="#E7CD9C" fill="none" fill-opacity="0">
+                        <animate attributeName="r" begin=" ani1.begin + 0.3s" from="30%" to="49%" dur="1s" repeatCount="indefinite"></animate>
+                        <animate attributeName="opacity" begin="ani1.begin + 0.3s" from="1" to="0" dur="1s" repeatCount="indefinite"></animate>
+                    </circle>
+                    <circle  cx="50%" cy="50%" r="38%" stroke-width="1" stroke="#E7CD9C" fill="none" fill-opacity="0"> 
+                        <animate attributeName="r" begin=" ani1.begin + 0.6s" from="30%" to="49%" dur="1s" repeatCount="indefinite"></animate> 
+                        <animate attributeName="opacity" begin="ani1.begin + 0.6s" from="1" to="0" dur="1s" repeatCount="indefinite"></animate>
+                    </circle> 
+
+                </svg>
+            </div>
+        </div>
+        <div view-mode="v" view-rotation="v" view-scale="noborder" view-width="640" view-height="1236" view-align="">
+            <div class="video">
+                <video id="video" style="display:block;"></video>
+            </div>
+        </div>
+    </div>
+    <div id="lock" class="lock">
+        <i class="icon"></i>
+        <p>为了更好的体验，请使用竖屏浏览</p>
+    </div>
+    <div class="WeiboTip">
+        <div class="dialog">
+            <div class="content">
+                请关闭手机静音
+            </div>
+            <div class="footer" id="weiBoBtn">
+                确定
+            </div>
+        </div>
+    </div>
+    <script src="./assets/libs/jquery-3.6.0.min.js"></script>
+    <script src="./assets/libs/widget.min.js"></script>
+    <script src="./assets/libs/player.min.js"></script>
+    <script src="./assets/libs/anime.min.js"></script>
+    <script src="./assets/libs/share.js"></script>
+</body>
+</html>
